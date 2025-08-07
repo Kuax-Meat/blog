@@ -221,7 +221,7 @@ article img {
     /* 이미지를 가운데 정렬 */
     border-radius: 4px;
     /* 이미지 모서리를 둥글게 처리 */
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
     filter: grayscale() contrast(0.85);
     transition: filter 0.4s ease;
 }
@@ -462,7 +462,7 @@ tbody tr:last-child td {
     border-radius: 8px;
     transition: background-color 0.2s;
     text-decoration: none;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
 }
 
 .post-list-item:hover {
@@ -481,7 +481,7 @@ tbody tr:last-child td {
     border-radius: 6px;
     overflow: hidden;
     /* 우측 하단을 사선으로 자르는 clip-path 속성 추가 */
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
 }
 
 .post-thumbnail img {
@@ -561,7 +561,7 @@ tbody tr:last-child td {
         border-radius: 8px;
         transition: background-color 0.2s;
         text-decoration: none;
-        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+        clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
     }
 }
 
