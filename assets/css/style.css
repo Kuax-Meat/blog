@@ -539,8 +539,8 @@ tbody tr:last-child td {
         display: flex;
         /* align-items: center;를 stretch로 변경하여 아이템들의 높이를 맞춤 */
         align-items: stretch;
-        gap: 0.5em;
-        padding: 0.8em 0.5em;
+        gap: 1em;
+        padding: 1em 1em;
         border-radius: 8px;
         transition: background-color 0.2s;
         text-decoration: none;
