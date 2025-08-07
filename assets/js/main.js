@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let lastScrollTop = 0;
         window.addEventListener('scroll', () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop && scrollTop > 300) {
+            if (scrollTop > lastScrollTop && scrollTop > 150) {
                 toolbar.classList.add('hidden');
             } else {
                 toolbar.classList.remove('hidden');

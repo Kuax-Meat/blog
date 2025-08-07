@@ -7,6 +7,7 @@ baseurl: ""
 url: "https://blog.kuax.org" # 실제 서비스될 블로그 주소
 timezone: Asia/Seoul
 asset-url: /assets
+livereload: true
 collections:
   posts:
     output: true
