@@ -193,7 +193,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-top: 2.5em;
 }
 
@@ -274,10 +274,10 @@ u {
 blockquote {
     font-family: var(--header-font);
     font-style: italic;
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     border-left: 3px solid var(--accent-color);
-    padding-left: 2em;
-    margin: 2em 0;
+    padding-left: 1em;
+    margin: 1em 0;
     color: var(--accent-color);
 }
 
@@ -463,7 +463,7 @@ tbody tr:last-child td {
 .post-thumbnail {
     flex-shrink: 0;
     width: 80px;
-    /* 고정 높이(height)를 제거하여 유연하게 늘어나도록 함 */
+    height: 80px;
     border-radius: 6px;
     overflow: hidden;
     /* 우측 하단을 사선으로 자르는 clip-path 속성 추가 */
@@ -474,6 +474,7 @@ tbody tr:last-child td {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    image-rendering: auto;
 }
 
 .post-content h2 {
