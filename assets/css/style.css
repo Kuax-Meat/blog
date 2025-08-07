@@ -219,7 +219,7 @@ article img {
     /* 이미지를 가운데 정렬 */
     border-radius: 4px;
     /* 이미지 모서리를 둥글게 처리 */
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
 }
 
 /* --- [추가] 본문 링크 스타일 --- */
