@@ -1,0 +1,28 @@
+<div class="toolbar-wrapper" id="toolbar-wrapper">
+    <div class="toolbar" id="toolbar">
+        <div class="toolbar-group">
+            <a href="{{ '/' | relative_url }}" class="toolbar-button" title="홈으로">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+            </a>
+            <button id="copy-url" title="링크 복사">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path>
+                </svg>
+            </button>
+            <button id="theme-toggle" title="테마 전환">
+                <!-- JS가 이곳에 아이콘을 삽입합니다 -->
+                <span id="theme-icon-container"></span>
+            </button>
+        </div>
+        <div class="toolbar-group">
+            <button id="font-decrease" title="글자 작게">가-</button>
+            <button id="font-increase" title="글자 크게">가+</button>
+        </div>
+    </div>
+</div>

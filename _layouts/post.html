@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<article>
+    <header>
+        <div class="category">
+            {{ page.category | escape }}
+        </div>
+        <h1>{{ page.title | escape }}</h1>
+        <p class="meta-info">
+            {{ page.author | default: site.author }} · {{ page.date | date: "%b %d, %y" }}
+        </p>
+    </header>
+
+    {{ content }}
+</article>
+
+<section class="recent-posts">
+    <h3>최근 포스트</h3>
+    <ul class="recent-posts-list">
+        {% assign post_counter = 0 %}
+        {% for post in site.posts limit:4 %}
+        {% if post.url != page.url and post_counter < 3 %} <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </li>
+            {% assign post_counter = post_counter | plus: 1 %}
+            {% endif %}
+            {% endfor %}
+    </ul>
+</section>
+
+<div class="footer">
+    © Jay, Kuax
+</div>

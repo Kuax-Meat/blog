@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'ko' }}">
+{% include head.html %}
+
+<body>
+    {% include toolbar.html %}
+    <main class="container">
+        {{ content }}
+    </main>
+
+    <div id="lightbox" class="lightbox-overlay">
+        <button class="lightbox-close" title="닫기">&times;</button>
+        <button class="lightbox-prev" title="이전">&#10094;</button>
+        <button class="lightbox-next" title="다음">&#10095;</button>
+        <div class="lightbox-content">
+            <img src="" class="lightbox-image" alt="확대 이미지">
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+
+</html>

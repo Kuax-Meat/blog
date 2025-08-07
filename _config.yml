@@ -1,0 +1,11 @@
+# _config.yml 예시
+title: Kuax Blog
+author: Jay
+description: >-
+  놀기 좋아하는 개발자
+baseurl: ""
+url: "https://blog.kuax.org" # 실제 서비스될 블로그 주소
+collections:
+  posts:
+    output: true
+    permalink: /:title
