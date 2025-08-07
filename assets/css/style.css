@@ -217,6 +217,29 @@ article img {
     /* 이미지 모서리를 둥글게 처리 */
 }
 
+/* --- [추가] 본문 링크 스타일 --- */
+article a {
+    color: var(--accent-color);
+    text-decoration: none;
+    /* 텍스트 아래에 1px짜리 은은한 밑줄을 만듭니다. */
+    border-bottom: 1px solid var(--border-color);
+    transition: color 0.2s, border-bottom-color 0.2s;
+}
+
+article a:hover {
+    /* 마우스를 올리면 본문 텍스트 색상과 동일하게 변경됩니다. */
+    color: var(--text-color);
+    border-bottom-color: var(--text-color);
+}
+
+/* 방문했던 링크의 색상이 보라색으로 변하는 것을 방지하고,
+  디자인 일관성을 위해 기본 링크 색상과 동일하게 유지합니다.
+*/
+article a:visited {
+    color: var(--accent-color);
+    border-bottom-color: var(--border-color);
+}
+
 /* figure 태그의 기본 배경색 제거 (이미지에만 적용되도록) */
 figure svg,
 figure img {

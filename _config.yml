@@ -1,10 +1,11 @@
 # _config.yml 예시
 title: Kuax Blog
-author: Jay
+author: Jayden
 description: >-
-  놀기 좋아하는 개발자
+  놀기 좋아하는 개발자의 블로그
 baseurl: ""
 url: "https://blog.kuax.org" # 실제 서비스될 블로그 주소
+timezone: Asia/Seoul
 collections:
   posts:
     output: true

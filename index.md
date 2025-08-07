@@ -15,18 +15,32 @@ layout: default
       </li>
     {% endfor %}
   </ul>
+</div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+<div class="footer">
+    © Jay, Kuax
 </div>
 
 <style>
-  .home { max-width: 720px; margin: 0 auto; }
-  .page-heading { font-family: 'Noto Serif KR', serif; font-size: 2rem; border-bottom: 2px solid var(--text-color); padding-bottom: 0.3em; }
-  .post-list { list-style: none; padding-left: 0; }
-  .post-list li { margin-bottom: 2rem; }
-  .post-meta { font-size: 0.9rem; color: var(--accent-color); }
-  .post-list h2 { margin-top: 0.2em; font-family: 'Noto Serif KR', serif; }
-  .post-link { text-decoration: none; color: var(--text-color); font-size: 1.5rem; }
-  .post-link:hover { text-decoration: underline; }
-  .rss-subscribe { font-size: 0.9rem; color: var(--accent-color); }
+    .home { max-width: 720px; margin: 0 auto; }
+    .page-heading { font-family: 'Noto Serif KR', serif; font-size: 2rem; padding-bottom: 0em; text-align: center;}
+    .page-heading::after {
+        content: '.';
+        display: block;
+        text-align: center;
+        color: var(--accent-color);
+        font-family: var(--body-font);
+        font-weight: 600;
+        font-size: 1.5rem;
+        letter-spacing: 0.3em; /* 점 사이의 간격 */
+        padding: 0;
+        margin-top: 0.5em; /* 제목과 점 구분선 사이의 간격 */
+    }
+    .post-list { list-style: none; padding-left: 0; }
+    .post-list li { margin-bottom: 2rem; }
+    .post-meta { font-size: 0.9rem; color: var(--accent-color); }
+    .post-list h2 { margin-top: 0.2em; font-family: 'Noto Serif KR', serif; }
+    .post-link { text-decoration: none; color: var(--text-color); font-size: 1.5rem; }
+    .post-link:hover { text-decoration: underline; }
+    .rss-subscribe { font-size: 0.9rem; color: var(--accent-color); }
 </style>
