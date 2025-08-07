@@ -79,6 +79,7 @@ header h1 {
 .toolbar.hidden {
     opacity: 0;
     visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0s 0.3s;
 }
 
 .toolbar {
@@ -87,13 +88,15 @@ header h1 {
     align-items: center;
     padding: 6px;
     background-color: var(--toolbar-bg-color);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     border: 1px solid var(--toolbar-border-color);
     border-radius: 12px;
     box-shadow: 0 4px 12px var(--toolbar-shadow);
     pointer-events: auto; /* 툴바 자체는 클릭이 가능하도록 설정 */
-    transition: opacity 0.4s;
+    transition: opacity 0.4s ease, visibility 0s;
+    opacity: 1;
+    visibility: visible;
 }
 
 .toolbar-group {
