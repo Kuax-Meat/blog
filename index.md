@@ -8,10 +8,19 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
+        <a class="post-list-item" href="{{ post.url | relative_url }}">
+          <!-- 썸네일이 있을 경우 표시되는 이미지 박스 -->
+          {% if post.thumbnail %}
+            <div class="post-thumbnail">
+              <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}">
+            </div>
+          {% endif %}
+
+          <div class="post-content">
+            <h2>{{ post.title | escape }}</h2>
+            <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+          </div>
+        </a>
       </li>
     {% endfor %}
   </ul>
@@ -37,8 +46,6 @@ layout: default
         margin-top: 0.5em; /* 제목과 점 구분선 사이의 간격 */
     }
     .post-list { list-style: none; padding-left: 0; }
-    .post-list li { margin-bottom: 2rem; }
-    .post-meta { font-size: 0.9rem; color: var(--accent-color); }
     .post-list h2 { margin-top: 0.2em; font-family: 'Noto Serif KR', serif; }
     .post-link { text-decoration: none; color: var(--text-color); font-size: 1.5rem; }
     .post-link:hover { text-decoration: underline; }
