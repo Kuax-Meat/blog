@@ -50,10 +50,12 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 header h1 {
     margin: 0;
     text-align: center;
 }
+
 .category {
     text-align: center;
     margin-top: 30px;
@@ -183,6 +185,7 @@ h1 {
     font-size: 1.5rem;
     letter-spacing: 0.3em; /* 점 사이의 간격 */
     margin-top: 1.5em; /* 제목과 점 구분선 사이의 간격 */
+    margin-bottom: 1.8em;
 }
 
 h2 {
@@ -194,7 +197,6 @@ h2 {
 
 h3 {
     font-size: 1.5rem;
-    margin-top: 2.5em;
 }
 
 /* --- [수정] 포스트 상단 여백 조정 --- */
@@ -274,7 +276,7 @@ u {
 blockquote {
     font-family: var(--header-font);
     font-style: italic;
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     border-left: 3px solid var(--accent-color);
     padding-left: 1em;
     margin: 1em 0;
@@ -373,7 +375,7 @@ tbody tr:last-child td {
     font-weight: 600;
     font-size: 1.5rem;
     letter-spacing: 0.3em; /* 점 사이의 간격 */
-    margin: 20px 0;
+    margin: 1.5em 0 2.0em 0;
 }
 
 .recent-posts {
@@ -433,7 +435,7 @@ tbody tr:last-child td {
     font-weight: 600;
     font-size: 1.5rem;
     letter-spacing: 0.3em; /* 점 사이의 간격 */
-    margin: 20px 0;
+    margin: 1.5em 0 2.0em 0;
 }
 
 .footer {
