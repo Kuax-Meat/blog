@@ -479,7 +479,7 @@ tbody tr:last-child td {
 .post-content h2 {
     margin: 0 0 0.2em 0;
     font-family: var(--header-font);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     padding: 0;
     border: none;
     color: var(--text-color);
