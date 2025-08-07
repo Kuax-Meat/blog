@@ -486,6 +486,7 @@ tbody tr:last-child td {
     line-height: 1.4;
 
     display: -webkit-box;
+    line-clamp: 1;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
