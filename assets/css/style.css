@@ -73,12 +73,12 @@ header h1 {
     display: flex;
     justify-content: center;
     z-index: 1000;
-    transition: opacity 0.4s;
     pointer-events: none; /* 래퍼의 빈 공간이 클릭을 방해하지 않도록 설정 */
 }
 
-.toolbar-wrapper.hidden {
+.toolbar.hidden {
     opacity: 0;
+    visibility: hidden;
 }
 
 .toolbar {
@@ -87,12 +87,13 @@ header h1 {
     align-items: center;
     padding: 6px;
     background-color: var(--toolbar-bg-color);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     border: 1px solid var(--toolbar-border-color);
     border-radius: 12px;
     box-shadow: 0 4px 12px var(--toolbar-shadow);
     pointer-events: auto; /* 툴바 자체는 클릭이 가능하도록 설정 */
+    transition: opacity 0.4s;
 }
 
 .toolbar-group {
@@ -215,6 +216,7 @@ article img {
     /* 이미지를 가운데 정렬 */
     border-radius: 4px;
     /* 이미지 모서리를 둥글게 처리 */
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%);
 }
 
 /* --- [추가] 본문 링크 스타일 --- */
@@ -301,7 +303,7 @@ figure img {
     height: auto;
     display: block;
     background-color: var(--code-bg-color);
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 figcaption {
@@ -460,6 +462,8 @@ tbody tr:last-child td {
     /* 고정 높이(height)를 제거하여 유연하게 늘어나도록 함 */
     border-radius: 6px;
     overflow: hidden;
+    /* 우측 하단을 사선으로 자르는 clip-path 속성 추가 */
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
 }
 
 .post-thumbnail img {

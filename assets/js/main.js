@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fontDecrease = document.getElementById('font-decrease');
     const copyUrlBtn = document.getElementById('copy-url');
     const themeToggle = document.getElementById('theme-toggle'); // 테마 버튼 요소 가져오기
-    const toolbar = document.getElementById('toolbar-wrapper');
+    const toolbar = document.getElementById('toolbar');
 
     // --- 툴바 스크롤 이벤트 ---
     if (toolbar) {
