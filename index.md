@@ -18,7 +18,7 @@ layout: default
 
           <div class="post-content">
             <h2>{{ post.title | escape }}</h2>
-            <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+            <span class="post-meta-category">{{post.category | escape}}</span><span class="post-meta"> · {{ post.date | date: "%b %-d, %Y" }}</span>
           </div>
         </a>
       </li>
@@ -32,9 +32,9 @@ layout: default
 
 <style>
     .home { max-width: 720px; margin: 0 auto; }
-    .page-heading { font-family: 'Noto Serif KR', serif; font-size: 2rem; padding-bottom: 0em; text-align: center;}
+    .page-heading { font-family: var(--header-font), serif; font-size: 2rem; padding-bottom: 0em; text-align: center;}
     .page-heading::after {
-        content: '.';
+        content: '...';
         display: block;
         text-align: center;
         color: var(--accent-color);

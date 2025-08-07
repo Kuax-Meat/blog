@@ -453,6 +453,7 @@ tbody tr:last-child td {
     border-radius: 8px;
     transition: background-color 0.2s;
     text-decoration: none;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
 }
 
 .post-list-item:hover {
@@ -466,7 +467,7 @@ tbody tr:last-child td {
     border-radius: 6px;
     overflow: hidden;
     /* 우측 하단을 사선으로 자르는 clip-path 속성 추가 */
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
 }
 
 .post-thumbnail img {
@@ -478,17 +479,25 @@ tbody tr:last-child td {
 .post-content h2 {
     margin: 0 0 0.2em 0;
     font-family: var(--header-font);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    padding: 0;
+    border: none;
     color: var(--text-color);
     line-height: 1.4;
 
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     overflow: hidden;
     text-overflow: ellipsis;
     
     /* 고정된 최소 높이(min-height)를 제거하여 자연스러운 높이를 갖도록 함 */
+}
+
+.post-content .post-meta-category {
+    font-family: var(--category-font);
+    font-size: 1.6rem;
+    color: var(--accent-color);
 }
 
 .post-content .post-meta {
@@ -524,6 +533,18 @@ tbody tr:last-child td {
     .ad-section {
         padding: 2em 0;
         margin: 2.5em 0;
+    }
+
+    .post-list-item {
+        display: flex;
+        /* align-items: center;를 stretch로 변경하여 아이템들의 높이를 맞춤 */
+        align-items: stretch;
+        gap: 0.5em;
+        padding: 0.8em 0.5em;
+        border-radius: 8px;
+        transition: background-color 0.2s;
+        text-decoration: none;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
     }
 }
 
