@@ -221,7 +221,7 @@ article img {
     /* 이미지를 가운데 정렬 */
     border-radius: 4px;
     /* 이미지 모서리를 둥글게 처리 */
-    clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+    clip-path: polygon(35px 0, 100% 0, 100% calc(100% - 35px), calc(100% - 35px) 100%, 0 100%, 0 35px);
     filter: grayscale() contrast(0.85);
     transition: filter 0.4s ease;
 }
