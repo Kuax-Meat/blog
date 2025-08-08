@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function sendMessageToGiscus(message) {
         const iframe = document.querySelector('iframe.giscus-frame');
         if (iframe) {
-            iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+            iframe.contentWindow.postMessage({ giscus: message }, '*');
         } else {
             console.log('Giscus iframe not found. Waiting for it to load...');
         }

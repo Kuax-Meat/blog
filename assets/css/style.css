@@ -370,17 +370,6 @@ tbody tr:last-child td {
     border-bottom: none;
 }
 
-.ad-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3em 0;
-    font-size: 0.9rem;
-    border-radius: 4px;
-    letter-spacing: 0.5px;
-}
-
 .comment::before {
     content: '.';
     display: block;
@@ -613,11 +602,6 @@ tbody tr:last-child td {
 
     p {
         font-size: 1rem;
-    }
-
-    .ad-section {
-        padding: 2em 0;
-        margin: 2.5em 0;
     }
 
     .post-list-item {
