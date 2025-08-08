@@ -167,8 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const iframe = document.querySelector('iframe.giscus-frame');
         if (iframe) {
             iframe.contentWindow.postMessage({ giscus: message }, '*');
-        } else {
-            console.log('Giscus iframe not found. Waiting for it to load...');
         }
     }
 
@@ -187,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Giscus가 로드되었다는 신호(discussion 데이터)가 포함된 메시지인지 확인
         if (event.data?.giscus) {
             // 저장된 테마로 즉시 변경
-            sendMessageToGiscus({ setConfig: { theme: (getCurrentTheme === 'light') ? 'light':'noborder_gray' } });
+            sendMessageToGiscus({ setConfig: { theme: (getCurrentTheme() === 'light') ? 'light':'noborder_gray' } });
         }
     });
 
