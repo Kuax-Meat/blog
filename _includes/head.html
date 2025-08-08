@@ -2,11 +2,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
-    <meta name="description"
-        content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <title>{%- if page.title -%}{{ page.title | escape }} - {{escape}}{%- endif -%}{{ site.title | escape }}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-    <link href="{{ site.asset-url }}/img/global/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+    <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +16,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
     <!-- RSS Feed -->
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ " /feed.xml" |
-        relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
     <!-- Google Adsense -->
     <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6810256932319207"

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://blog.kuax.org/sitemap.xml
