@@ -329,8 +329,9 @@ figure img {
 figcaption {
     text-align: center;
     font-size: 0.9rem;
+    font-style: italic;
     color: var(--accent-color);
-    margin-top: 0.9em;
+    margin-top: 0.5em;
 }
 
 pre {
@@ -671,7 +672,7 @@ tbody tr:last-child td {
     height: 1px;
     transform: rotate(-45deg);
     z-index: 999;
-    bottom: 30px;
+    bottom: 17px;
     right: -15px;
 }
 
