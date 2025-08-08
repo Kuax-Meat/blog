@@ -1,7 +1,9 @@
-<figure class="post-image-wrapper" data-src="{{ include.url | relative_url }}"
-    data-caption="{{ include.caption | escape }}">
-    <img src="{{ include.url | relative_url }}" alt="{{ include.caption | default: '포스트 이미지' }}">
-    {% if include.caption %}
-    <figcaption>{{ include.caption }}</figcaption>
-    {% endif %}
-</figure>
+<div class="image-container">
+    <figure class="post-image-wrapper" data-src="{{ include.url | relative_url }}"
+        data-caption="{{ include.caption | escape }}">
+        <img src="{{ include.url | relative_url }}" alt="{{ include.caption | default: '포스트 이미지' }}">
+        {% if include.caption %}
+        <figcaption>{{ include.caption }}</figcaption>
+        {% endif %}
+    </figure>
+</div>
