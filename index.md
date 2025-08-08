@@ -27,14 +27,11 @@ layout: default
 </div>
 <div class="footer-ad">
   <h3>AD</h3>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6810256932319207" crossorigin="anonymous"></script>
-  <ins class="adsbygoogle"
-      style="display:block"
-      data-ad-format="fluid"
-      data-ad-layout-key="-gl-1p-1o-1r+lx"
-      data-ad-client="ca-pub-6810256932319207"
-      data-ad-slot="2780191441">
-  </ins>
+  <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6810256932319207"
+        crossorigin="anonymous"></script>
+  <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
+      data-ad-format="fluid" data-ad-client="ca-pub-6810256932319207" data-ad-slot="6156313766"></ins>
   <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
