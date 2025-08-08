@@ -75,7 +75,8 @@ header h1 {
     display: flex;
     justify-content: center;
     z-index: 1000;
-    pointer-events: none; /* 래퍼의 빈 공간이 클릭을 방해하지 않도록 설정 */
+    pointer-events: none;
+    /* 래퍼의 빈 공간이 클릭을 방해하지 않도록 설정 */
 }
 
 .toolbar.hidden {
@@ -95,7 +96,8 @@ header h1 {
     border: 1px solid var(--toolbar-border-color);
     border-radius: 12px;
     box-shadow: 0 4px 12px var(--toolbar-shadow);
-    pointer-events: auto; /* 툴바 자체는 클릭이 가능하도록 설정 */
+    pointer-events: auto;
+    /* 툴바 자체는 클릭이 가능하도록 설정 */
     transition: opacity 0.4s ease, visibility 0s;
     opacity: 1;
     visibility: visible;
@@ -112,7 +114,8 @@ header h1 {
     padding-right: 5px;
 }
 
-.toolbar button, .toolbar a.toolbar-button {
+.toolbar button,
+.toolbar a.toolbar-button {
     background: none;
     border: none;
     color: var(--accent-color);
@@ -138,7 +141,8 @@ header h1 {
     padding-right: 5px;
 }
 
-.toolbar button:hover, .toolbar a.toolbar-button:hover {
+.toolbar button:hover,
+.toolbar a.toolbar-button:hover {
     background-color: var(--border-color);
 }
 
@@ -183,8 +187,10 @@ h1 {
     font-family: var(--body-font);
     font-weight: 600;
     font-size: 1.5rem;
-    letter-spacing: 0.3em; /* 점 사이의 간격 */
-    margin-top: 1.5em; /* 제목과 점 구분선 사이의 간격 */
+    letter-spacing: 0.3em;
+    /* 점 사이의 간격 */
+    margin-top: 1.5em;
+    /* 제목과 점 구분선 사이의 간격 */
     margin-bottom: 1.8em;
 }
 
@@ -322,7 +328,7 @@ figcaption {
     text-align: center;
     font-size: 0.9rem;
     color: var(--accent-color);
-    margin-top: 0.8em;
+    margin-top: 0.9em;
 }
 
 pre {
@@ -381,7 +387,8 @@ tbody tr:last-child td {
     font-family: var(--body-font);
     font-weight: 600;
     font-size: 1.5rem;
-    letter-spacing: 0.3em; /* 점 사이의 간격 */
+    letter-spacing: 0.3em;
+    /* 점 사이의 간격 */
     margin: 1.5em 0 2.0em 0;
 }
 
@@ -407,7 +414,8 @@ tbody tr:last-child td {
     font-family: var(--body-font);
     font-weight: 600;
     font-size: 1.5rem;
-    letter-spacing: 0.3em; /* 점 사이의 간격 */
+    letter-spacing: 0.3em;
+    /* 점 사이의 간격 */
     margin: 1.5em 0 2.0em 0;
 }
 
@@ -429,7 +437,8 @@ tbody tr:last-child td {
     list-style: none;
     padding-left: 0;
     display: grid;
-    gap: 1.5em; /* 카드 사이의 간격 */
+    gap: 1.5em;
+    /* 카드 사이의 간격 */
 }
 
 .recent-posts-list li {
@@ -441,7 +450,8 @@ tbody tr:last-child td {
 }
 
 .recent-posts-list li:hover {
-    transform: translateY(-5px); /* 마우스를 올리면 살짝 위로 이동 */
+    transform: translateY(-5px);
+    /* 마우스를 올리면 살짝 위로 이동 */
 }
 
 .recent-posts-list a {
@@ -467,7 +477,8 @@ tbody tr:last-child td {
     font-family: var(--body-font);
     font-weight: 600;
     font-size: 1.5rem;
-    letter-spacing: 0.3em; /* 점 사이의 간격 */
+    letter-spacing: 0.3em;
+    /* 점 사이의 간격 */
     margin: 1.5em 0 2.0em 0;
 }
 
@@ -533,7 +544,7 @@ tbody tr:last-child td {
     -webkit-line-clamp: 1;
     overflow: hidden;
     text-overflow: ellipsis;
-    
+
     /* 고정된 최소 높이(min-height)를 제거하여 자연스러운 높이를 갖도록 함 */
 }
 
@@ -592,7 +603,41 @@ tbody tr:last-child td {
 }
 
 .post-image-wrapper {
-    cursor: zoom-in; /* 이미지에 마우스를 올리면 확대 커서 표시 */
+    cursor: zoom-in;
+    /* 이미지에 마우스를 올리면 확대 커서 표시 */
+    position: relative;
+    /* ::before, ::after 가상요소의 위치 기준점 */
+    display: inline-block;
+    /* 내부 이미지 크기에 맞게 컨테이너 크기 조절 */
+    margin: 0 auto;
+    /* 블로그 본문에서 가운데 정렬을 위함 */
+    line-height: 0;
+    /* 이미지 하단의 불필요한 공백 제거 */
+}
+
+/* 2. 라인을 그릴 가상 요소 스타일 (공통) */
+.post-image-wrapper::before {
+    content: '';
+    position: absolute;
+    background-color: var(--accent-color);
+    width: 64px;
+    height: 1px;
+    transform: rotate(-45deg);
+    z-index: 999;
+    top: 17px;
+    left: -15px;
+}
+
+.post-image-wrapper::after {
+    content: '';
+    position: absolute;
+    background-color: var(--accent-color);
+    width: 64px;
+    height: 1px;
+    transform: rotate(-45deg);
+    z-index: 999;
+    bottom: 30px;
+    right: -15px;
 }
 
 .lightbox-overlay {
@@ -602,7 +647,8 @@ tbody tr:last-child td {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.85);
-    display: none; /* 평소에는 숨김 */
+    display: none;
+    /* 평소에는 숨김 */
     justify-content: center;
     align-items: center;
     z-index: 2000;
@@ -641,7 +687,9 @@ tbody tr:last-child td {
     line-height: 1.5;
 }
 
-.lightbox-close, .lightbox-prev, .lightbox-next {
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
     position: absolute;
     background: none;
     border: none;
@@ -651,10 +699,13 @@ tbody tr:last-child td {
     opacity: 0.7;
     transition: opacity 0.2s;
     padding: 1rem;
-    -webkit-tap-highlight-color: transparent; /* 모바일 터치 시 하이라이트 제거 */
+    -webkit-tap-highlight-color: transparent;
+    /* 모바일 터치 시 하이라이트 제거 */
 }
 
-.lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover {
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
     opacity: 1;
 }
 

@@ -27,7 +27,7 @@ layout: default
 </div>
 
 <div class="footer">
-    © Jay, Kuax 2025.
+    © Jayden, Kuax 2025.
 </div>
 
 <style>
