@@ -372,7 +372,6 @@ tbody tr:last-child td {
 
 .ad-section {
     width: 100%;
-    color: var(--accent-color);
     display: flex;
     justify-content: center;
     align-items: center;

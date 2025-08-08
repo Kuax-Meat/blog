@@ -23,6 +23,19 @@ layout: default
         </a>
       </li>
     {% endfor %}
+      <li>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6810256932319207"
+        crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-format="fluid"
+            data-ad-layout-key="-gl-1p-1o-1r+lx"
+            data-ad-client="ca-pub-6810256932319207"
+            data-ad-slot="2780191441"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </li>
   </ul>
 </div>
 
