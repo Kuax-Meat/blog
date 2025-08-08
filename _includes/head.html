@@ -5,7 +5,7 @@
     <title>{%- if page.title -%}{{ page.title | escape }} - {{escape}}{%- endif -%}{{ site.title | escape }}</title>
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-    <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+    <link rel="icon" href="/assets/img/global/favicon.ico" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
