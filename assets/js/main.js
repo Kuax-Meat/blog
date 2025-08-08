@@ -184,11 +184,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        console.log(event);
         // Giscus가 로드되었다는 신호(discussion 데이터)가 포함된 메시지인지 확인
         if (event.data?.giscus) {
             // 저장된 테마로 즉시 변경
-            console.log('hello');
             sendMessageToGiscus({ setConfig: { theme: (getCurrentTheme === 'light') ? 'light':'noborder_gray' } });
         }
     });
