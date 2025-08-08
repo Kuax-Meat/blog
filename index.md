@@ -26,6 +26,7 @@ layout: default
   </ul>
 </div>
 <div class="footer-ad">
+  <h3>AD</h3>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6810256932319207" crossorigin="anonymous"></script>
   <ins class="adsbygoogle"
       style="display:block"
