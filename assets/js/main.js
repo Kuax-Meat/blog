@@ -161,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
             closeLightbox();
         }
     });
-    const GISCUS_THEME_KEY = 'giscus-theme'; // LocalStorage 키
 
     // Giscus에 메시지를 보내는 함수
     function sendMessageToGiscus(message) {
