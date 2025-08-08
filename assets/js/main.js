@@ -67,9 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const applyTheme = (theme) => {
             if (theme === 'dark') {
                 html.classList.add('dark-mode');
+                changeGiscusTheme('noborder_gray');
                 if (themeIconContainer) themeIconContainer.innerHTML = sunIcon;
             } else {
                 html.classList.remove('dark-mode');
+                changeGiscusTheme('light');
                 if (themeIconContainer) themeIconContainer.innerHTML = moonIcon;
             }
         };
@@ -82,10 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // 페이지 로드 시 테마 결정
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-        const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+        const initialTheme = getCurrentTheme();
         applyTheme(initialTheme);
     }
 
@@ -162,5 +161,45 @@ document.addEventListener('DOMContentLoaded', () => {
             closeLightbox();
         }
     });
+    const GISCUS_THEME_KEY = 'giscus-theme'; // LocalStorage 키
 
+    // Giscus에 메시지를 보내는 함수
+    function sendMessageToGiscus(message) {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (iframe) {
+            iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        } else {
+            console.log('Giscus iframe not found. Waiting for it to load...');
+        }
+    }
+
+    // 테마를 변경하고 LocalStorage에 저장하는 함수
+    function changeGiscusTheme(theme) {
+        sendMessageToGiscus({ setConfig: { theme: theme } });
+    }
+
+    // Giscus로부터 오는 메시지를 감지
+    window.addEventListener('message', event => {
+        // Giscus에서 보낸 메시지가 아니면 무시
+        if (event.origin !== 'https://giscus.app') {
+            return;
+        }
+
+        console.log(event);
+        // Giscus가 로드되었다는 신호(discussion 데이터)가 포함된 메시지인지 확인
+        if (event.data?.giscus) {
+            // 저장된 테마로 즉시 변경
+            console.log('hello');
+            sendMessageToGiscus({ setConfig: { theme: (getCurrentTheme === 'light') ? 'light':'noborder_gray' } });
+        }
+    });
+
+    function getCurrentTheme() {
+        let theme = localStorage.getItem('theme');
+        if (!theme) {
+            theme = (window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+        }
+
+        return theme;
+    }
 });
