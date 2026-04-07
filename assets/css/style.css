@@ -641,7 +641,7 @@ tbody tr:last-child td {
 .post-image-wrapper::before {
     content: '';
     position: absolute;
-    background-color: var(--tone-down-accent-color);
+    background-color: var(--accent-color);
     width: 64px;
     height: 1px;
     transform: rotate(-45deg);
@@ -653,7 +653,7 @@ tbody tr:last-child td {
 .post-image-wrapper::after {
     content: '';
     position: absolute;
-    background-color: var(--tone-down-accent-color);
+    background-color: var(--accent-color);
     width: 64px;
     height: 1px;
     transform: rotate(-45deg);
